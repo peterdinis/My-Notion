@@ -4,7 +4,7 @@ import { useConvexAuth } from "convex/react";
 import { Loader2 } from "lucide-react";
 
 import { redirect } from "next/navigation";
-import Sidebar from "../_components/shared/Sidebar";
+import {Sidebar} from "../_components/shared/Sidebar";
 import SearchCommand from "../_components/commands/SearchCommand";
 
 const MainLayOut = ({ children }: { children: React.ReactNode }) => {
