@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Toaster } from "sonner";
+import { Toaster } from "@/components/ui/toaster"
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { EdgeStoreProvider } from "@/lib/edgestore";
@@ -32,7 +32,7 @@ export default function RootLayout({
               disableTransitionOnChange
               storageKey="eisa's-notion-theme"
             >
-              <Toaster position="bottom-right" />
+              <Toaster/>
               <ModelProvider />
               {children}
             </ThemeProvider>

@@ -5,24 +5,24 @@ import { useMutation } from "convex/react";
 import { PlusCircle } from "lucide-react";
 import React from "react";
 import { api } from "@/convex/_generated/api";
-import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { useToast } from "@/hooks/use-toast";
 
 function DocumentsPage() {
   const router = useRouter();
   const { user } = useUser();
   const createDocument = useMutation(api.documents.createDocument);
-
+  const {toast} = useToast();
   const onCreateDocument = () => {
     const promise = createDocument({ title: "Untitled" }).then((documentId) => {
       router.push(`/documents/${documentId}`);
     });
 
-    toast.promise(promise, {
-      loading: "Creating A New Node...",
-      success: "Node Created",
-      error: "Failed to Create Node",
-    });
+    toast({
+      title: "Create new node" + promise,
+      duration: 2000,
+      className: "bg-green-800 text-white font-bold"
+    })
   };
 
   return (
