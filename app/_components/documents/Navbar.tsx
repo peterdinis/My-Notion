@@ -7,6 +7,10 @@ import { MenuIcon } from "lucide-react";
 
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
+import { Title } from "./Title";
+import { Publish } from "./Publisher";
+import { Menu } from "./Menu";
+import Banner from "./Banner";
 
 interface NavbarProps {
   isCollapsed: boolean;
