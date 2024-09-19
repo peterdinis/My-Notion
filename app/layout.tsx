@@ -1,24 +1,18 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Toaster } from "sonner";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./_components/shared/providers/ThemeProvider";
+import { EdgeStoreProvider } from "@/lib/edgestore";
+import { cn } from "@/lib/utils";
 import ConvexClientProvider from "./_components/shared/providers/ConvexClerkProvider";
-import Navbar from "./_components/shared/Navbar";
+import { ThemeProvider } from "./_components/shared/providers/ThemeProvider";
+import { ModelProvider } from "./_components/shared/providers/ModelProvider";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Notion",
-  description: "Application for taking notes with AI Power",
+  title: "MyNotion",
+  description: "The Connecting workspace where better, faster work happens",
 };
 
 export default function RootLayout({
@@ -27,21 +21,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <ConvexClientProvider>
-          <Navbar />
-          {children}
-          </ConvexClientProvider>
-        </ThemeProvider>
+    <html lang="en" className="dark:bg-[#1f1f1f]" suppressHydrationWarning>
+      <body className={cn(inter.className, "dark:bg-[#1f1f1f]")}>
+        <ConvexClientProvider>
+          <EdgeStoreProvider>
+            <ThemeProvider
+              attribute="class"
+              enableSystem
+              defaultTheme="system"
+              disableTransitionOnChange
+              storageKey="eisa's-notion-theme"
+            >
+              <Toaster position="bottom-right" />
+              <ModelProvider />
+              {children}
+            </ThemeProvider>
+          </EdgeStoreProvider>
+        </ConvexClientProvider>
       </body>
     </html>
   );
