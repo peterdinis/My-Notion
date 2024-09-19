@@ -5,6 +5,8 @@ import { IconPicker } from "./icon-picker";
 import { ImageIcon, Smile, X } from "lucide-react";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { useCoverImage } from "@/app/_hooks/use-cover-image";
+import { Button } from "@/components/ui/button";
 
 interface ToolbarProps {
   initialData: Doc<"documents">;
