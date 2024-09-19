@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "./_components/shared/providers/ThemeProvider";
 import ConvexClientProvider from "./_components/shared/providers/ConvexClerkProvider";
+import Navbar from "./_components/shared/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,6 +38,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ConvexClientProvider>
+          <Navbar />
           {children}
           </ConvexClientProvider>
         </ThemeProvider>
