@@ -26,6 +26,9 @@ importers:
       '@edgestore/react':
         specifier: ^0.2.2
         version: 0.2.2(next@14.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zod@3.23.8)
+      '@edgestore/server':
+        specifier: ^0.2.2
+        version: 0.2.2(@aws-sdk/client-s3@3.654.0)(@aws-sdk/s3-request-presigner@3.654.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zod@3.23.8)
       '@radix-ui/react-alert-dialog':
         specifier: ^1.1.1
         version: 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -380,6 +383,23 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
       zod: '>=3.0.0'
+
+  '@edgestore/server@0.2.2':
+    resolution: {integrity: sha512-H0ZbiO96Tu96Pw8tyiTcq+DqyY5MY2gYm74wQceOF6UZGGJGagCkj85z66X4a2bKSRwY1fD96Ok7b+M1ayxEzQ==}
+    peerDependencies:
+      '@aws-sdk/client-s3': '>=3.0.0'
+      '@aws-sdk/s3-request-presigner': '>=3.0.0'
+      '@azure/storage-blob': ^12.17.0
+      zod: '>=3.0.0'
+    peerDependenciesMeta:
+      '@aws-sdk/client-s3':
+        optional: true
+      '@aws-sdk/s3-request-presigner':
+        optional: true
+      '@azure/storage-blob':
+        optional: true
+      zod:
+        optional: true
 
   '@edgestore/shared@0.2.2':
     resolution: {integrity: sha512-d7jPVkyLSaD5FkSuyV9+s1o2QbRmpOwBQZQLdb9BfYWQktf8kB4LX+Tds+6B19dOF0CR0FV/ea56JP8wM/TKGg==}
@@ -4654,6 +4674,21 @@ snapshots:
       zod: 3.23.8
     transitivePeerDependencies:
       - aws-crt
+
+  '@edgestore/server@0.2.2(@aws-sdk/client-s3@3.654.0)(@aws-sdk/s3-request-presigner@3.654.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zod@3.23.8)':
+    dependencies:
+      '@edgestore/shared': 0.2.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zod@3.23.8)
+      '@panva/hkdf': 1.2.1
+      cookie: 0.5.0
+      jose: 4.15.9
+      uuid: 9.0.1
+    optionalDependencies:
+      '@aws-sdk/client-s3': 3.654.0
+      '@aws-sdk/s3-request-presigner': 3.654.0
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - react
+      - react-dom
 
   '@edgestore/shared@0.2.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zod@3.23.8)':
     dependencies:
