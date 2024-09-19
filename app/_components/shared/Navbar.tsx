@@ -38,7 +38,7 @@ const Navbar: FC = () => {
         {isAuthenticated && !isLoading && (
           <>
             <Button variant={"ghost"} size={"sm"}>
-              <Link href="/documents">Enter Notion</Link>
+              <Link href="/documents">Enter MyNotion</Link>
             </Button>
             <UserButton afterSwitchSessionUrl="/" />
           </>
