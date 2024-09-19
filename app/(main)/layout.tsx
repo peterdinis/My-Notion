@@ -2,8 +2,10 @@
 
 import { useConvexAuth } from "convex/react";
 import { Loader2 } from "lucide-react";
+
 import { redirect } from "next/navigation";
 import Sidebar from "../_components/shared/Sidebar";
+import SearchCommand from "../_components/commands/SearchCommand";
 
 const MainLayOut = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, isLoading } = useConvexAuth();
@@ -22,7 +24,7 @@ const MainLayOut = ({ children }: { children: React.ReactNode }) => {
     <div className="h-full flex dark:bg-[#1f1f1f] ">
       <Sidebar />
       <main className="flex-1 h-full overflow-y-auto">
-        Search
+        <SearchCommand />
         {children}
       </main>
     </div>
