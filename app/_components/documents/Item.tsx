@@ -83,12 +83,6 @@ export const Item = ({
             },
         );
 
-        /* toast.promise(promise, {
-      loading: "Creating a new note...",
-      success: "New note created!",
-      error: "Failed to create a new note",
-    }); */
-
         toast({
             title: 'Creating a new note...' + promise,
             duration: 2000,
@@ -141,7 +135,7 @@ export const Item = ({
                 </kbd>
             )}
             {!!id && (
-                <div className='ml-auto flex items-center gap-x-2'>
+                <div className='ml-auto z-100000 flex items-center gap-x-2'>
                     <DropdownMenu>
                         <DropdownMenuTrigger
                             asChild
