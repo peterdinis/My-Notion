@@ -32,7 +32,7 @@ function UserItem() {
           <ChevronsLeftRight className="rotate-90 ml-2 text-muted-foreground h-4 w-4" />
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-80 " align="start" alignOffset={11}>
+      <DropdownMenuContent className="w-80 z-[100000]"  align="start" alignOffset={11}>
         <div className="flex flex-col space-y-4 p-2">
           <p className="text-xs font-medium leading-none text-muted-foreground">
             {user?.emailAddresses[0].emailAddress}
