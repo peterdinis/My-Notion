@@ -7,4 +7,4 @@ const authConfig = {
     ],
 };
 
-export default authConfig;
+export default authConfig; 
