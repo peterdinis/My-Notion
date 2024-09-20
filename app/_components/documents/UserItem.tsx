@@ -59,7 +59,7 @@ function UserItem() {
                     asChild
                     className='w-full cursor-pointer text-muted-foreground'
                 >
-                    <SignOutButton>LogOut</SignOutButton>
+                    <SignOutButton>Logout</SignOutButton>
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
