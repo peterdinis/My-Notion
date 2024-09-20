@@ -52,7 +52,7 @@ export const Menu = ({ documentId }: MenuProps) => {
                 alignOffset={8}
                 forceMount
             >
-                <DropdownMenuItem onClick={onArchive}>
+                <DropdownMenuItem className="z-100000" onClick={onArchive}>
                     <Trash className='mr-2 h-4 w-4' />
                     Delete
                 </DropdownMenuItem>
