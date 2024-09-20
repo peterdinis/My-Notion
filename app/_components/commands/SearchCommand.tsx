@@ -39,7 +39,7 @@ function SearchCommand() {
     useEffect(() => {
         document.addEventListener('keydown', down);
         return () => document.removeEventListener('keydown', down);
-    }, [toggle]);
+    }, [toggle, down]);
 
     const handleSelect = (id: string) => {
         router.push(`/document/${id}`);
