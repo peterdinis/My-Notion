@@ -3,7 +3,7 @@ import {env} from "../env";
 const authConfig = {
     providers: [
         {
-            domain: 'https://deep-sheep-89.clerk.accounts.dev/',
+            domain: env.NEXT_PUBLIC_CONVEX_DOMAIN,
             applicationID: 'convex',
         },
     ],
