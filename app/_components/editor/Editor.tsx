@@ -7,6 +7,7 @@ import { useEdgeStore } from '@/lib/edgestore';
 import '@blocknote/core/fonts/inter.css';
 import '@blocknote/mantine/style.css';
 import { useCopyToClipboard } from '@/app/_hooks/use-copy';
+import { Button } from '@/components/ui/button';
 
 interface EditorProps {
   onChange: (content: string) => void;
@@ -51,12 +52,13 @@ function Editor({ onChange, initialContent, editable }: EditorProps) {
         editable={editable}
         onChange={handleChange}
       />
-      <button
+      <Button
         onClick={handleCopy}
-        className="mt-4 p-2 bg-blue-600 text-white rounded"
+        size={"lg"}
+        variant={"default"}
       >
         Copy Content
-      </button>
+      </Button>
     </div>
   );
 }
