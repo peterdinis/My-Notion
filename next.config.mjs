@@ -1,9 +1,17 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true,
-    images: {
-        domains: ['files.edgestore.dev'],
-    },
+/** @type {import("next").NextConfig} */
+
+const config = {
+	reactStrictMode: true,
+	images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "*",
+				port: "",
+				pathname: "/**",
+			},
+		],
+	},
 };
 
-export default nextConfig;
+export default config;
