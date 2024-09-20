@@ -1,22 +1,22 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import CoverImageModel from "../../models/ConverImageModel";
-import { SettingsModel } from "../../models/SettingsModel";
+import { useEffect, useState } from 'react';
+import CoverImageModel from '../../models/ConverImageModel';
+import { SettingsModel } from '../../models/SettingsModel';
 
 export const ModelProvider = () => {
-  const [isMounted, setIsMounted] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
-  if (!isMounted) return null;
+    if (!isMounted) return null;
 
-  return (
-    <>
-      <SettingsModel />
-      <CoverImageModel />
-    </>
-  );
+    return (
+        <>
+            <SettingsModel />
+            <CoverImageModel />
+        </>
+    );
 };

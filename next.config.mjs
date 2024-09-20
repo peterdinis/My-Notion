@@ -1,4 +1,17 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+/** @type {import("next").NextConfig} */
 
-export default nextConfig;
+const config = {
+	reactStrictMode: true,
+	images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "*",
+				port: "",
+				pathname: "/**",
+			},
+		],
+	},
+};
+
+export default config;
