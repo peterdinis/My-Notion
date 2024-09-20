@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { FC } from 'react';
 
@@ -13,10 +12,6 @@ const HomeHeader: FC = () => {
                 The connecting workspace where
                 <br /> better, faster work happens
             </h3>
-
-            <Button variant={"default"}>
-                <Link href="/register">Try now</Link>
-            </Button>
         </div>
     );
 };
