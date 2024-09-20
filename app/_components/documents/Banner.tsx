@@ -20,13 +20,8 @@ function Banner({ documentId }: BannerProps) {
 
     const onRemove = () => {
         const promise = removeDocument({ id: documentId });
-        /* toast.promise(promise, {
-      loading: "Removing Note...",
-      success: "Note removed",
-      error: "Failed to remove document",
-    }); */
         toast({
-            title: 'Remove note',
+            title: 'Remove note' + promise,
             duration: 2000,
             className: 'bg-red-800 text-white font-bold',
         });
@@ -37,7 +32,7 @@ function Banner({ documentId }: BannerProps) {
         const promise = restoreDocument({ id: documentId });
 
         toast({
-            title: 'Restore note',
+            title: 'Restore note' + promise,
             duration: 2000,
             className: 'bg-yellow-800 text-white font-bold',
         });
