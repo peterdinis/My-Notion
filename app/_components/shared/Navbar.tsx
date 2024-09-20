@@ -27,9 +27,6 @@ const Navbar: FC = () => {
                                 Log In
                             </Button>
                         </SignInButton>
-                        <SignInButton>
-                            <Button size={'sm'}>Get Free Trial</Button>
-                        </SignInButton>
                     </>
                 )}
                 {isAuthenticated && !isLoading && (
