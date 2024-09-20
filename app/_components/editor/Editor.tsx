@@ -37,7 +37,7 @@ function Editor({ onChange, initialContent, editable }: EditorProps) {
   };
 
   // Use the copy-to-clipboard hook
-  const [copiedText, copyToClipboard] = useCopyToClipboard();
+  const [, copyToClipboard] = useCopyToClipboard();
 
   const handleCopy = () => {
     const content = JSON.stringify(editor.topLevelBlocks, null, 2);

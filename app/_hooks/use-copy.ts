@@ -26,7 +26,7 @@ export function useCopyToClipboard(): [CopiedValue, CopyFn] {
 					className: "bg-green-500 text-blue-50",
 				});
 				return true;
-			} catch (error) {
+			} catch {
 				toast({
 					title: "Hodnotu sa nepodarilo skopírovať",
 					duration: 2000,

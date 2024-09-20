@@ -1,9 +1,10 @@
-'use client';
+"use client"
+
 import { api } from '@/convex/_generated/api';
 import { useUser } from '@clerk/clerk-react';
 import { useQuery } from 'convex/react';
 import { useRouter } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { File } from 'lucide-react';
 import UseSearch from '@/app/_hooks/use-search';
 import {
@@ -29,17 +30,18 @@ function SearchCommand() {
         setismounted(true);
     }, []);
 
-    const down = (e: KeyboardEvent) => {
+    // Wrap the 'down' function in useCallback to prevent it from being redefined on every render
+    const down = useCallback((e: KeyboardEvent) => {
         if (e.key === 'q' && (e.metaKey || e.ctrlKey)) {
             e.preventDefault();
             toggle();
         }
-    };
+    }, [toggle]);
 
     useEffect(() => {
         document.addEventListener('keydown', down);
         return () => document.removeEventListener('keydown', down);
-    }, [toggle, down]);
+    }, [down]);
 
     const handleSelect = (id: string) => {
         router.push(`/document/${id}`);

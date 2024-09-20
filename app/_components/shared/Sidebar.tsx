@@ -135,7 +135,7 @@ export const Sidebar = () => {
         }).then((documentId) => router.push(`/documents/${documentId}`));
 
         toast({
-            title: 'Creating a new note...',
+            title: 'Creating a new note...' + promise,
             duration: 2000,
             className: 'bg-green-800 text-white font-bold text-xl',
         });
