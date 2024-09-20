@@ -35,7 +35,7 @@ function DocumentsIdPage({ params }: DocumentsIdPageProps) {
         if (!params.documentId) {
             router.push('/documents');
         }
-    }, [params.documentId]);
+    }, [params.documentId, router]);
 
     if (document === undefined)
         return (
