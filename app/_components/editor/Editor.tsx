@@ -6,8 +6,6 @@ import { useTheme } from 'next-themes';
 import { useEdgeStore } from '@/lib/edgestore';
 import '@blocknote/core/fonts/inter.css';
 import '@blocknote/mantine/style.css';
-import { useCopyToClipboard } from '@/app/_hooks/use-copy';
-import { Button } from '@/components/ui/button';
 
 interface EditorProps {
     onChange: (content: string) => void;
@@ -36,14 +34,6 @@ function Editor({ onChange, initialContent, editable }: EditorProps) {
         onChange(JSON.stringify(content, null, 2));
     };
 
-    // Use the copy-to-clipboard hook
-    const [, copyToClipboard] = useCopyToClipboard();
-
-    const handleCopy = () => {
-        const content = JSON.stringify(editor.topLevelBlocks, null, 2);
-        copyToClipboard(content);
-    };
-
     return (
         <div>
             <BlockNoteView
@@ -52,9 +42,6 @@ function Editor({ onChange, initialContent, editable }: EditorProps) {
                 editable={editable}
                 onChange={handleChange}
             />
-            <Button onClick={handleCopy} size={'lg'} variant={'default'}>
-                Copy Content
-            </Button>
         </div>
     );
 }
