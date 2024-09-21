@@ -6,7 +6,7 @@ import { PlusCircle } from 'lucide-react';
 import React from 'react';
 import { api } from '@/convex/_generated/api';
 import { useRouter } from 'next/navigation';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/app/_hooks/use-toast';
 
 function DocumentsPage() {
     const router = useRouter();

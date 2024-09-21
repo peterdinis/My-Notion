@@ -5,7 +5,7 @@ import { useParams, usePathname, useRouter } from 'next/navigation';
 
 import { useMutation } from 'convex/react';
 import { useMediaQuery } from 'usehooks-ts';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/app/_hooks/use-toast';
 import {
     ChevronsLeft,
     MenuIcon,

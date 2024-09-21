@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useMutation } from 'convex/react';
 import { Check, Copy, Globe } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/app/_hooks/use-toast';
 import {
     Popover,
     PopoverTrigger,
