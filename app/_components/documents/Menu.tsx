@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -36,7 +36,7 @@ export const Menu = ({ documentId }: MenuProps) => {
         setIsDeleted(true); // Trigger animation on delete
 
         const promise = archive({ id: documentId });
-        
+
         toast({
             title: 'Archiving note...' + promise,
             duration: 2000,

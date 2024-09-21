@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { api } from '@/convex/_generated/api';
 import { useUser } from '@clerk/clerk-react';
@@ -31,12 +31,15 @@ function SearchCommand() {
     }, []);
 
     // Wrap the 'down' function in useCallback to prevent it from being redefined on every render
-    const down = useCallback((e: KeyboardEvent) => {
-        if (e.key === 'q' && (e.metaKey || e.ctrlKey)) {
-            e.preventDefault();
-            toggle();
-        }
-    }, [toggle]);
+    const down = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.key === 'q' && (e.metaKey || e.ctrlKey)) {
+                e.preventDefault();
+                toggle();
+            }
+        },
+        [toggle],
+    );
 
     useEffect(() => {
         document.addEventListener('keydown', down);

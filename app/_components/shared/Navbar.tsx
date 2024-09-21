@@ -17,7 +17,9 @@ const Navbar: FC = () => {
                 'fixed top-0 z-50 flex w-full items-center bg-background px-6 py-4 dark:bg-[#1f1f1f]'
             }
         >
-            <h2 className='prose-h2: prose dark:text-blue-50 text-xl font-bold'>My Notion</h2>
+            <h2 className='prose-h2: prose text-xl font-bold dark:text-blue-50'>
+                My Notion
+            </h2>
             <div className='flex w-full items-center justify-between gap-x-2 md:ml-auto md:w-fit md:justify-end'>
                 {isLoading && <Loader2 className='h-8 w-8 animate-spin' />}
                 {!isAuthenticated && !isLoading && (
