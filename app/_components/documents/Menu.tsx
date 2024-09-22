@@ -19,7 +19,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 
 import { api } from '@/convex/_generated/api';
 import { Id } from '@/convex/_generated/dataModel';
-import { toast } from '@/hooks/use-toast';
+import { toast } from '@/app/_hooks/use-toast';
 
 interface MenuProps {
     documentId: Id<'documents'>;

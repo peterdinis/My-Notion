@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/app/_hooks/use-toast';
 import { useMutation, useQuery } from 'convex/react';
 import { Loader2, Search, Trash, Undo } from 'lucide-react';
 import { Input } from '@/components/ui/input';
