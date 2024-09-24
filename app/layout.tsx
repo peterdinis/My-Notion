@@ -30,7 +30,7 @@ export default function RootLayout({
                             enableSystem
                             defaultTheme='system'
                             disableTransitionOnChange
-                            storageKey="eisa's-notion-theme"
+                            storageKey="my-notionkey"
                         >
                             <Toaster />
                             <ModelProvider />
