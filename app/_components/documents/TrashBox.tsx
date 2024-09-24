@@ -77,7 +77,7 @@ export const TrashBox = () => {
             </div>
             <div className='mt-2 px-1 pb-1'>
                 <p className='hidden pb-2 text-center text-xs text-muted-foreground last:block'>
-                    No notes found.
+                    No notes found. 😔
                 </p>
                 {filteredDocuments?.map((document) => (
                     <div
