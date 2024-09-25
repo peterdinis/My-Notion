@@ -141,7 +141,7 @@ export const Item = ({
                     </kbd>
                 )}
                 {!!id && (
-                    <div className='z-100000 ml-auto flex items-center gap-x-2'>
+                    <div className='ml-auto flex items-center gap-x-2'>
                         <DropdownMenu>
                             <DropdownMenuTrigger
                                 asChild
