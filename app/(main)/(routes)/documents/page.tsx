@@ -30,7 +30,7 @@ function DocumentsPage() {
     return (
         <div className='flex min-h-[100vh] flex-col items-center justify-center space-y-4'>
             <h2 className='text-lg font-medium'>
-                Welcom to {user?.firstName}&apos;s Notion
+                Welcome to {user?.firstName}&apos;s Notion
             </h2>
             <Button onClick={onCreateDocument}>
                 <PlusCircle className='mr-2 h-4 w-4' />
