@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
-import { Inter } from 'next/font/google';
+import { Domine} from 'next/font/google';
 import './globals.css';
 import { EdgeStoreProvider } from '@/lib/edgestore';
 import { cn } from '@/lib/utils';
@@ -8,7 +8,7 @@ import ConvexClientProvider from './_components/shared/providers/ConvexClerkProv
 import { ThemeProvider } from './_components/shared/providers/ThemeProvider';
 import { ModelProvider } from './_components/shared/providers/ModelProvider';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Domine({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: 'MyNotion',
